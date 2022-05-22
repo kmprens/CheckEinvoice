@@ -1,0 +1,38 @@
+    import shutil
+    import requests
+    import os
+    import pytesseract
+    from bs4 import BeautifulSoup
+    from PIL import Image
+    import uuid
+    no = tax_no
+    result = False
+    if no:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1'
+        }
+        session = requests.Session()
+        url = 'https://sorgu.efatura.gov.tr/kullanicilar/img.php'
+        response = session.get(url, stream=True)
+        img_file = '/tmp/{}.jpg'.format(uuid.uuid4())
+        with open(img_file, 'wb') as out_file:
+            shutil.copyfileobj(response.raw, out_file)
+        del response
+        metin = pytesseract.image_to_string(Image.open(img_file))
+        payload = {'search_string': str(no),'captcha_code': str(metin)}
+        r = session.post(
+            'https://sorgu.efatura.gov.tr/kullanicilar/xliste.php',
+            headers=headers,
+            data=payload
+        )
+        corba = BeautifulSoup(r.text, features='html.parser')
+        guvenlik_kodu = corba.find('p', attrs={'style':'color:red;font-weight:bold'})
+        if guvenlik_kodu:
+            if not guvenlik_kodu.text == "Lütfen sadece sayısal değerler giriniz!":
+                check_einvoice(tax_no=tax_no,item_id=item_id)
+        else:
+            d = corba.find("div")
+            if d:
+                if d.text == "Mükellef kayıtlıdır.":
+                   result = True
+        os.remove(img_file)
