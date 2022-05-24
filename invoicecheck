@@ -30,7 +30,7 @@ def check_einvoice(tax_no):
         guvenlik_kodu = corba.find('p', attrs={'style':'color:red;font-weight:bold'})
         if guvenlik_kodu:
             if not guvenlik_kodu.text == "Lütfen sadece sayısal değerler giriniz!":
-                check_einvoice(tax_no=tax_no)
+                result = check_einvoice(tax_no=tax_no)
         else:
             d = corba.find("div")
             if d:
