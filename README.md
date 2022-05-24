@@ -29,8 +29,6 @@ Projelerinize bu şekilde entegre edebilirsiniz.
 
 ### Kullanılan Dil
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 * [Python](https://www.python.org/)
 
 <p align="right">(<a href="#top">Yukarı Çık</a>)</p>
