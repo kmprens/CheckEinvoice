@@ -1,70 +1,40 @@
-<div id="top"></div>
+# 🚀 CheckEinvoice
 
+Vergi No veya TC Kimlik No ile **e‑Fatura mükellefiyetini sorgulayan** Python kütüphanesi.  
+Gelir İdaresi Başkanlığı (GİB) altyapısını kullanarak **hızlı, basit ve bağımsız** bir çözüm sunar.  
 
+Bu kütüphane sayesinde herhangi bir resmi API anahtarına gerek kalmadan, doğrudan sorgulama yapabilirsiniz.
 
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://kivircikyazilimci.com/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-12-at-03.54.29.jpeg" alt="Logo" width="80" height="80">
-  </a>
+---
 
-  <h3 align="center">Kıvırcık Yazılımcı</h3>
+## 🧐 Ne İşe Yarar?
 
-  <p align="center">
-    Müşteride Efatura kontrolü sağlama
-    <br />
-  </p>
-</div>
+- Bir firma veya kişinin **e‑Fatura mükellefi olup olmadığını** kontrol eder.  
+- Ticari işlemler öncesi **otomatik doğrulama** yaparak manuel kontrol ihtiyacını ortadan kaldırır.  
+- E‑ticaret siteleri, muhasebe uygulamaları, ERP sistemleri veya otomasyon projelerine kolayca entegre edilebilir.  
+- Vergi Numarası veya TC Kimlik Numarası üzerinden sorgulama yapar.
 
+Örnek kullanım alanları:
+- ✅ Fatura kesmeden önce alıcının e‑Fatura durumunu doğrulamak  
+- ✅ CRM / ERP sistemlerinde otomatik kontrol yapmak  
+- ✅ Python tabanlı finansal entegrasyon projeleri
 
-<!-- ABOUT THE PROJECT -->
-## Hakkında
+---
 
-Ebelge sitesini kullanarak kullanıcının, müşterinin, tedarikçinin e-fatura mükellefi olup olmadığını sorgulayan yazılımın kod bloğudur.
-Projelerinize bu şekilde entegre edebilirsiniz. 
+## ✨ Özellikler
 
-<p align="right">(<a href="#top">Yukarı Çık</a>)</p>
+- 🚀 **Hızlı:** Tek fonksiyon çağrısı ile anında sonuç
+- 🛠 **Bağımsız:** Ekstra bağımlılık gerektirmez
+- 💡 **Kolay Entegrasyon:** İster pip ile yükle, ister fonksiyonu direkt projenize dahil et
+- 🔒 **Güvenli:** Doğrudan GİB üzerinden kontrol
 
+---
 
+## 📦 Kurulum
 
-### Kullanılan Dil
+Henüz PyPI üzerinde yayınlanmamıştır. Kullanmak için projeyi klonlayarak yükleyebilirsiniz:
 
-* [Python](https://www.python.org/)
-
-<p align="right">(<a href="#top">Yukarı Çık</a>)</p>
-
-
-
-
-<!-- Kullanımı -->
-## Kullanımı
-Kod bloğunu kopyalayıp entegre etmek istediğiniz fonksiyona yapıştırabilirsiniz. tax_no değerini dinamik olarak göndermeniz yeterlidir.
-
-
-<!-- CONTACT -->
-## İletişim
-
-Şinasi Ç. - [@kivircikyazilim](https://twitter.com/kivircikyazilim) - kivircikyazilimci.com
-
-Project Link: [https://github.com/kmprens/checkeinvoice](https://github.com/kmprens/checkeinvoice)
-
-<p align="right">(<a href="#top">Yukarı Çık</a>)</p>
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+```bash
+git clone https://github.com/kmprens/CheckEinvoice.git
+cd CheckEinvoice
+python -m pip install .
